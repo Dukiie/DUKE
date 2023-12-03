@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/icon.png">
+    <link rel="stylesheet" href="main.css">
+    <title>Let's Learn Data Structure and Algorithm</title>
+</head>
+<body>
+    <div class="background">
+        <img src="image/Background.png" alt="">
+    </div>
+    <div class="header">
+        <h2><a href="Landing.html"><img src="" alt="">DATA STRUCTURE AND ALGORITHM</a></h2>
+    </div>
+    <nav>
+        <div class="container">
+            <h1>Topic: </h1>
+            <ul>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="DSAI.html">DSA I</a></li>
+                <li><a href="Tree-basedDSA.html">Tree Based DSA I</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#Stack">Stack</a></li>
+            <li><a href="#Queue">Queue</a></li>
+            <li><a href="#TQ">Type of Queue</a></li>
+            <li><a href="#CQ">Circular Queue</a></li>
+            <li><a href="#PQ">Priority Queue</a></li>
+            <li><a href="#Deque">Deque</a></li>
+        </ul>
+    </div>
+    
+    <div class="description">
+        <div>
+            <h1 id="Stack">STACK DATA STRUCTURE</h1>
+                <p>
+                    A stack is a linear data structure that follows the LIFO (Last In, First Out) principle. This means that the last element added to the stack is the first one to be removed. Stacks are often used to implement undo/redo functionality in software applications, as well as for parsing expressions and balancing parentheses.
+                </p>
+            <img src="image/Stack.png" alt="Stack">
+            <h2>
+                Real-world examples of stacks include:
+            </h2>
+            <ul>
+                <li>A pile of plates.</li>
+                <li>A deck of cards.</li>
+                <li>A call stack</li>
+                <li>A browser's back button history</li>
+            </ul>
+            <h2>
+                Basic Operations of Stacks:
+            </h2>
+            <ul>
+                <li>push: Adds an element to the top of the stack.</li>
+                <li>pop: Removes the top element from the stack and returns it.</li>
+                <li>peek: Returns the top element of the stack without removing it.</li>
+                <li>isEmpty: Checks if the stack is empty.</li>
+            </ul>
+            <img src="image/Push.png" alt="">
+            <h2>
+                Implementing a Stack:
+            </h2>
+            <p>
+                Stacks can be implemented using arrays or linked lists. Arrays are simpler to implement, but they can become inefficient if the stack grows too large. Linked lists are more efficient for large stacks, but they can be more complex to implement.
+            </p>
+            <h2>
+                Applications of Stacks
+            </h2>
+            <p>
+                Stacks are used in a variety of applications, including:
+            </p>
+            <ul>
+                <li>Expression evaluation: Stacks are used to evaluate expressions by storing operands and operators in a LIFO order.</li>
+                <li>Function calls: Stacks are used to keep track of the order in which functions are called and to return control to the correct function when a function returns.</li>
+                <li>Undo/redo functionality: Stacks are used to implement undo/redo functionality in software applications by storing the previous states of the data.</li>
+                <li>Parsing expressions: Stacks are used to parse expressions by storing tokens (operators, operands, and parentheses) in a LIFO order.</li>
+                <li>Balancing parentheses: Stacks are used to check if parentheses in an expression are balanced.</li>
+            </ul>
+        </div>
+        
+        <div>
+            <h1 id="Queue">QUEUE DATA STUCTURE</h1>
+            <p>
+                A queue is a linear data structure that follows the FIFO (First In, First Out) principle. This means that the first element added to the queue is the first one to be removed. Queues are often used to implement task scheduling, buffering data, and managing printer jobs.
+            </p>
+            <img src="image/Queue.png" alt="QUEUE">
+            <h2>Real-world examples of queues include:</h2>
+            <ul>
+                <li>A line of people waiting at a checkout counter.</li>
+                <li>A waiting list for a restaurant.</li>
+                <li>A print queue.</li>
+            </ul>
+            <h2>
+                Basic Operations of Queue:
+            </h2>
+            <ul>
+                <li>enqueue: Adds an element to the rear of the queue.</li>
+                <li>dequeue: Removes the front element from the queue and returns it.</li>
+                <li>peek: Returns the top element of the stack without removing it.</li>
+                <li>isEmpty: Checks if the stack is empty.</li>
+            </ul>
+            <img src="image/unknown.png" alt="">
+            <h2>
+                Implementing a Queue:
+            </h2>
+            <p>
+                Queues can be implemented using arrays or linked lists. Arrays are simpler to implement, but they can become inefficient if the queue grows too large. Linked lists are more efficient for large queues, but they can be more complex to implement.
+            </p>
+            <h2>
+                Applications of Queues
+            </h2>
+            <p>
+                <b> Queues are used in a variety of applications, including:</b>
+            </p>
+            <ul>
+                <li>Task scheduling: Queues are used to schedule tasks in a FIFO order, ensuring that older tasks are completed before newer tasks.</li>
+                <li>Buffering data: Queues are used to buffer data between different stages of a process, such as buffering data between a network and a disk.</li>
+                <li>Managing printer jobs: Queues are used to manage printer jobs, ensuring that jobs are printed in the order they were submitted.</li>
+            </ul>
+        </div>
+        <div>
+            <h1 id="TQ">TYPE OF QUEUE</h1>
+            <p>
+                A queue is a type of data structure that is commonly used in computer programming. It is a linear collection of elements, where the elements are inserted at one end and removed from the other end. This is known as the "First In, First Out" (FIFO) principle.
+            </p>
+            <br>
+            <p>
+                <b>There are four main types of queues:</b>
+            </p>
+            <ol>
+                <li>Simple Queue: This is the most basic type of queue. It is implemented using an array or a linked list.</li>
+                <img src="image/SimpleQueue.png" alt="SimpleQueue">
+                <li>Circular Queue: This is a variation of the simple queue that is more efficient for use in situations where the queue is frequently full or empty. It is implemented using an array that is treated as if it were circular.</li>
+                <img src="image/CircularQueue.png" alt="CircularQueue">
+                <li>Priority Queue: This type of queue prioritizes elements based on their value. The element with the highest priority is always removed from the queue first.</li>
+                <img src="image/PriorityQueue.png" alt="PriorityQueue">
+                <li>Double-Ended Queue (Deque): This type of queue allows elements to be inserted and removed from both ends. It is implemented using a doubly linked list.</li>
+            </ol>
+            <h2>
+                Applications of Queues
+            </h2>
+            <p>
+                <b> Queues are used in a variety of applications, including:</b>
+            </p>
+            <ul>
+                <li>Operating systems: Queues are used to manage processes waiting for CPU time.</li>
+                <li>Networking: Queues are used to buffer data packets that are being transmitted over a network.</li>
+                <li>Printers: Queues are used to store print jobs that are waiting to be printed.</li>
+                <li>Web servers: Queues are used to manage requests for web pages</li>
+            </ul>
+            <br>
+            <table>
+                <tr>
+                    <th>Type of Queue</th>
+                    <th>Description</th>
+                    <th>Implementation</th>
+                    <th>Application</th>
+                </tr>
+                <tr>
+                    <td>Simple Queue</td>
+                    <td>The most basic type of queue</td>
+                    <td>Array or Linked List</td>
+                    <td>Operating systems, networking, printers</td>
+                </tr>
+                <tr>
+                    <td>Circular Queue</td>
+                    <td>A variation of the simple queue that is more efficient for use in situations where the queue is frequently full or empty</td>
+                    <td>Array treated as if it were circular</td>
+                    <td>Operating systems, networking</td>
+                </tr>
+                <tr>
+                    <td>Priority Queue</td>
+                    <td>A type of queue that prioritizes elements based on their value.</td>
+                    <td>Array or Heap</td>
+                    <td>Operating systems, scheduling algorithms</td>
+                </tr>
+                <tr>
+                    <td>Double-Ended Queue (Deque)</td>
+                    <td>A type of queue that allows elements to be inserted and removed from both ends</td>
+                    <td>Doubly Linked List</td>
+                    <td>Operating systems, networking</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h1 id="CQ">CIRCLE QUEUE DATA STRUCTURE</h1>
+            <p><b>Circular Queue: A Ring-Shaped Queue</b></p>
+            <p>
+                A circular queue is a data structure that functions like a regular queue, but with a circular twist. Instead of having elements line up in a straight line, the elements in a circular queue form a circle, with the last element connected to the first element. This circular structure allows for more efficient memory usage compared to a regular queue. 
+            </p>
+            <img src="image/CircularQueue.png" alt="">
+            <h2>
+                Key Features of Circular Queues
+            </h2>
+            <ul>
+                <li>FIFO (First In, First Out) Principle: Elements are removed from the queue in the same order they were inserted.</li>
+                <li>Circular Structure: Elements form a circular arrangement, with the last element connected to the first.</li>
+                <li>Efficient Memory Usage: No wasted space, even when elements are removed from the queue.</li>
+            </ul>
+            <h2>
+                Operations on Circular Queues
+            </h2>
+            <ul>
+                <li>enqueue(item): Inserts an item into the queue.</li>
+                <li>dequeue(): Removes the first item from the queue and returns it.</li>
+                <li>front(): Returns the first item in the queue without removing it.</li>
+                <li>isEmpty(): Checks if the queue is empty.</li>
+                <li>isFull(): Checks if the queue is full.</li>
+            </ul>
+            <h2>
+                Implementation of Circular Queues
+            </h2>
+            <p>
+                Circular queues can be implemented using either arrays or linked lists.
+            </p>
+            <h2>
+                Array Implementation:
+            </h2>
+            <ul>
+                <li>An array of fixed size is used to store the queue elements.</li>
+                <li>Two pointers, front and rear, are used to track the position of the first and last elements, respectively.</li>
+            </ul>
+            <h2>
+                Linked List Implementation:
+            </h2>
+            <ul>
+                <li>A doubly linked list is used to store the queue elements.</li>
+                <li>Two pointers, front and rear, are used to point to the first and last elements, respectively.</li>
+            </ul>
+            <h2>
+                Applications of Circular Queues
+            </h2>
+            <ul>
+                <li>Operating Systems: Managing processes waiting for CPU time or resources</li>
+                <li>Networking: Buffering data packets for transmission</li>
+                <li>Printers: Storing print jobs for sequential printing</li>
+                <li>Scheduling Algorithms: Managing task order and execution</li>
+            </ul>
+            <h2>
+                Advantages of Circular Queues
+            </h2>
+            <ul>
+                <li>Efficient Memory Usage: No wasted space due to the circular structure.</li>
+                <li>Constant-Time Operations: enqueue, dequeue, front, and isEmpty operations take constant time (O(1))</li>
+                <li>Ideal for Buffering: Efficiently handles data streams and data transfers</li>
+            </ul>
+            <h2>
+                Disadvantages of Circular Queues
+            </h2>
+            <ul>
+                <li>Fixed Size: Limited storage capacity due to the fixed size</li>
+                <li>Potential Overflow: Careful handling required to avoid overflow</li>
+                <li>Implementation Complexity: More complex to implement compared to regular queues</li>
+            </ul>
+            <h2>Circular Queues vs. Regular Queues</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Circular Queue</th>
+                    <th>Regular Queue</th>
+                </tr>
+                    <tr>
+                    <td>Memory Usage</td>
+                    <td>More Efficient</td>
+                    <td>Less Efficient</td>
+                </tr>
+                <tr>
+                    <td>Time Complexity</td>
+                    <td>Constant for enqueue, dequeue, front, isEmpty</td>
+                    <td>O(n) for enqueue, dequeue, front</td>
+                </tr>
+                <tr>
+                    <td>Buffering</td>
+                    <td>Ideal for Buffering</td>
+                    <td>Less Efficient for Buffering</td>
+                </tr>
+                <tr>
+                    <td>Implementation</td>
+                    <td>More Complex</td>
+                    <td>Simpler</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h1 id="PQ">PRIORITY QUEUE DATA STRUCTURE</h1>
+            <p><b>Priority Queue: Prioritizing Elements</b></p>
+            <p>
+                A priority queue is a type of queue that prioritizes elements based on their value. The element with the highest priority is always removed from the queue first. This makes priority queues ideal for situations where some elements are more important than others.
+            </p>
+            <img src="image/PriorityQ.png" alt="">
+            <h2>
+                Key Features of Priority Queues
+            </h2>
+            <ul>
+                <li>Prioritized Removal: Elements with higher priority are removed before elements with lower priority.</li>
+                <li>Dynamic Ordering: The order of elements changes as priorities change.</li>
+                <li>Efficient Search: Supports efficient search for elements with the highest priority.
+                </li>
+            </ul>
+            <h2>
+                Operations on Priority Queues
+            </h2>
+            <ul>
+                <li>enqueue(item, priority): Inserts an item into the queue with the specified priority.
+                </li>
+                <li>dequeue(): Removes and returns the element with the highest priority.
+                </li>
+                <li>front(): Returns the element with the highest priority without removing it.
+                </li>
+                <li>isEmpty(): Checks if the priority queue is empty.</li>
+                <li>changePriority(item, newPriority): Changes the priority of a specific item in the queue.
+                </li>
+            </ul>
+            <h2>
+                Implementation of Priority Queues
+            </h2>
+            <p>
+                Priority queues can be implemented using various data structures, including heaps, linked lists, and arrays.
+            </p>
+            <h2>
+                Heap Implementation:
+            </h2>
+            <ul>
+                <li>Heaps are a specialized tree-based data structure that maintains the priority order efficiently.</li>
+                <li>Priority queues implemented using heaps are highly efficient for enqueue, dequeue, and front operations.
+                </li>
+            </ul>
+            <h2>
+                Linked List Implementation:
+            </h2>
+            <ul>
+                <li>Linked lists are a linear collection of elements where each element points to the next.
+                </li>
+                <li>Priority queues implemented using linked lists are less efficient but offer flexibility in modifying priorities.
+                </li>
+            </ul>
+            <h2>
+                Array Implementation:
+            </h2>
+            <ul>
+                <li>Arrays are a collection of elements stored in contiguous memory locations.
+                </li>
+                <li>Priority queues implemented using arrays are generally less efficient than heap-based implementations.
+                </li>
+            </ul>
+            <h2>
+                Applications of Priority Queues
+            </h2>
+            <ul>
+                <li>Operating Systems: Scheduling processes based on priority levels
+                </li>
+                <li>Networking: Managing data packets based on importance and urgency
+                </li>
+                <li>Event-Driven Systems: Handling events in order of priority
+                </li>
+                <li>Search Algorithms: Implementing best-first search and A* search
+                </li>
+            </ul>
+
+            <h2>Advantages of Priority Queues</h2>
+            <ul>
+                <li>Prioritized Processing: Handles tasks based on their importance
+                </li>
+                <li>Efficient Search: Supports efficient search for highest priority elements
+                </li>
+                <li>Dynamic Adaptability: Adapts to changing priorities effectively
+                </li>
+            </ul>
+            <h2>Disadvantages of Priority Queues</h2>
+            <ul>
+                <li>Implementation Complexity: More complex to implement compared to regular queues
+                </li>
+                <li>Heap Maintenance: Heaps require additional overhead for maintaining priority order
+                </li>
+                <li>Limited Data Structures: Not all data structures are suitable for priority queue implementation
+                </li>
+            </ul>
+            <h2>Comparison of Priority Queues and Regular Queues</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Priority Queue</th>
+                    <th>Regular Queue</th>
+                </tr>
+                <tr>
+                    <td>Prioritization</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Removal Order</td>
+                    <td>Highest priority first</td>
+                    <td>First In, First Out (FIFO)</td>
+                </tr>
+                <tr>
+                    <td>Search Efficiency</td>
+                    <td>Efficient search for highest priority</td>
+                    <td>Inefficient search</td>
+                </tr>
+                <tr>
+                    <td>Implementation Complexity</td>
+                    <td>More Complex</td>
+                    <td>Simpler</td>
+                </tr>
+            </table>
+        <div>
+            <h1 id="Deque">DEQUE DATA STRUCTURE</h1>
+                <p>
+                    <b>Double-Ended Queue (Deque): A Versatile Queue</b>
+                </p>
+                <p>A double-ended queue, often abbreviated as deque, is a specialized type of queue that supports insertion and removal of elements from both ends. This functionality makes it more versatile than a regular queue, which only allows insertions at one end and removals at the other.
+                </p>
+                <img src="" alt="">
+                <h2>Key Features of Deques</h2>
+                <ul>
+                    <li>Dual-Ended Operations: Supports insertion and removal of elements from both ends                    </li>
+                    <li>Flexible Data Structure: Adaptable to various data storage and processing needs
+                    </li>
+                    <li>Efficient Memory Usage: Generally efficient memory allocation and usage
+                    </li>
+                </ul>
+                <h2>Operations on Deques</h2>
+                <ul>
+                    <li>enqueueFront(item): Inserts an item at the front of the deque.</li>
+                    <li>enqueueRear(item): Inserts an item at the rear of the deque.</li>
+                    <li>dequeueFront(): Removes and returns the first item from the deque.</li>
+                    <li>dequeueRear(): Removes and returns the last item from the deque.</li>
+                    <li>front(): Returns the first item in the deque without removing it.</li>
+                    <li>rear(): Returns the last item in the deque without removing it.</li>
+                    <li>isEmpty(): Checks if the deque is empty.</li>
+                    <li>size(): Returns the number of elements currently in the deque.</li>
+                </ul> 
+                <h2>Implementation of Deques</h2>
+                <ul>
+                    <li>Deques can be implemented using various data structures, including arrays, linked lists, and circular lists.</li>
+                    <li>Array Implementation: Arrays provide efficient random access, but deque operations may require shifting elements, impacting performance.</li>
+                    <li>Linked List Implementation: Linked lists offer flexibility in insertions and removals, but random access is less efficient.</li>
+                    <li>Circular List Implementation: Circular lists combine the advantages of arrays and linked lists, providing efficient insertions, removals, and random access.</li>
+                </ul>
+                <h2>Application of Deques</h2>
+                <ul>
+                    <li>Text Editors: Managing undo/redo operations and cursor movement</li>
+                    <li>Web Browsers: Handling back/forward navigation and history management</li>
+                    <li>Compilers: Implementing symbol tables and parsing algorithms</li>
+                    <li>Operating Systems: Managing task scheduling and resource allocation</li>
+                </ul>
+                <h2>Advantages of Deques</h2>
+                <ul>
+                    <li>Versatility: Supports insertion and removal from both ends</li>
+                    <li>Flexibility: Adaptable to various data structures and applications</li>
+                    <li>Efficiency: Efficient memory usage and operations</li>
+                </ul>
+                <h2>Disadvantages of Deques</h2>
+                <ul>
+                    <li>Implementation Complexity: More complex implementation compared to regular queues</li>
+                    <li>Data Structure Choice: Careful selection of the underlying data structure for optimal performance</li>
+                </ul>
+                <h2>Comparison of Deques and Regular Queues</h2>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Deque</th>
+                        <th>Regular Queue</th>
+                    </tr>
+                    <tr>
+                        <td>Insertion/Removal Ends</td>
+                        <td>Both ends (front and rear)</td>
+                        <td>One end (front) for insertion, one end (rear) for removal</td>
+                    </tr>
+                    <tr>
+                        <td>Versatility</td>
+                        <td>More versatile due to dual-ended operations</td>
+                        <td>Less versatile due to single-ended operations</td>
+                    </tr>
+                    <tr>
+                        <td>Applications</td>
+                        <td>Wider range of applications requiring flexibility and efficient access from both ends</td>
+                        <td>Primarily used in scenarios where FIFO (First In, First Out) ordering is essential</td>
+                    </tr>
+                </table>
+        </div>      
+    </div>
+    <a class="top" href="#"><img src="image/arrow-up.png"></a>
+</section>
+
+</body>
+</html>

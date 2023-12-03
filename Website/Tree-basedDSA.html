@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="image/icon.png">
+    <title>DSA</title>
+</head>
+<body>
+    <div class="background">
+        <img src="image/Background.png" alt="">
+    </div>
+    <div class="header">
+        <h2><a href="Landing.html"><img src="" alt="">DATA STRUCTURE AND ALGORITHM</a></h2>    
+    </div>
+    <nav>
+        <div class="container">
+            <h1>Topic: </h1>
+            <ul>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="DSAI.html">DSA I</a></li>
+                <li><a href="Tree-basedDSA.html">Tree Based DSA I</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#TDS">Tree Data Structure</a></li>
+            <li><a href="#TT">Tree Traversal</a></li>
+            <li><a href="#BT">Binary Tree</a></li>
+            <li><a href="#BST">Binary Search Tree</a></li>
+            <li><a href="#AVL">AVL tree</a></li>
+        </ul>
+    </div>
+    <div class="description">
+        <div>
+            <h1 id="TDS">TREE DATA STRUCTURE</h1>
+            <p>A tree is a nonlinear hierarchical data structure that consists of nodes connected by edges. Other data structures such as arrays, linked list, stack, and queue are linear data structures that store data sequentially. In order to perform any operation in a linear data structure, the time complexity increases with the increase in the data size. But, it is not acceptable in today's computational world.</p>
+            <img src="image/TreeRepresentation.png" alt="TreeDataStructure">
+            <h2>Tree Terminologies</h2>
+            <ul>
+                <li><b>Node</b></li>
+                <p>- A node is an entity that contains a key or value and pointers to its child nodes.
+                </p>
+                <li><b>Edge</b></li>
+                <p>It is the link between any two nodes.</p>
+                <li><b>Root</b></li>
+                <p>It is the topmost node of a tree.</p>
+                <li><b>Height of a Node</b></li>
+                <p>The height of a node is the number of edges from the node to the deepest leaf (ie. the longest path from the node to a leaf node).</p>
+                <li><b>Depth of a Node</b></li>
+                <p>The depth of a node is the number of edges from the root to the node.</p>
+                <li><b>Height of a Tree</b></li>
+                <p>The height of a Tree is the height of the root node or the depth of the deepest node.</p>
+                <li><b>Degree of a Node</b></li>
+                <p>The degree of a node is the total number of branches of that node.</p>
+                <li><b>Forest</b></li>
+                <p>A collection of disjoint trees is called a forest.</p>
+            </ul>
+            <br>
+            <img src="image/TerminologiesRep.png" alt="">
+            <h2>Tree Application</h2>
+            <ul>
+                <li>Binary Search Trees(BSTs) are used to quickly check whether an element is present in a set or not.</li>
+                <li>Heap is a kind of tree that is used for heap sort.</li>
+                <li>A modified version of a tree called Tries is used in modern routers to store routing information.</li>
+                <li>Most popular databases use B-Trees and T-Trees, which are variants of the tree structure we learned above to store their data</li>
+                <li>Compilers use a syntax tree to validate the syntax of every program you write.</li>
+            </ul>
+        </div>
+        <div>
+            <h1 id="TT">TREE TRAVERSAL</h1>
+            <h2>Tree Traversal: Systematic Navigation Through Tree Data Structures</h2>
+            <p>Tree traversal refers to the process of systematically visiting each node in a tree data structure. This technique is fundamental for various operations, including searching, retrieving, and modifying data within trees. Three primary tree traversal methods exist: inorder, preorder, and postorder, each with its unique order of visiting nodes.</p>
+            <h2>In-order Traversal</h2>
+            <p>Inorder traversal visits the nodes in a tree in a left-root-right order. This means it recursively traverses the left subtree, visits the root node, and then recursively traverses the right subtree. Inorder traversal is particularly useful for traversing binary search trees (BSTs) because it produces the elements in sorted order.
+            </p>
+            <br>
+            <p><i>If a binary tree is traversed in-order, the output will produce sorted key values in an ascending order.
+            </i></p>
+            <br>
+            <img src="image/Inorder.png" alt="">
+            <br>
+            <p><i>We start from A, and following in-order traversal, we move to its left subtree B.B is also traversed in-order. The process goes on until all the nodes are visited. The output of in-order traversal of this tree will be − D → B → E → A → F → C → G
+            </i></p>
+            <h2>Pre-order Traversal</h2>
+            <p>Preorder traversal visits the nodes in a root-left-right order. This means it visits the root node first, then recursively traverses the left subtree, and finally recursively traverses the right subtree. Preorder traversal is often used for copying or creating a hierarchical copy of a tree.
+            </p>
+            <p><i>In this traversal method, the root node is visited first, then the left subtree and finally the right subtree.</i></p>
+            <br>
+            <img src="image/Preorder.png" alt="">
+            <br>
+            <p><i>We start from A, and following pre-order traversal, we first visit A itself and then move to its left subtree B. B is also traversed pre-order. The process goes on until all the nodes are visited. The output of pre-order traversal of this tree will be − A → B → D → E → C → F → G
+            </i></p>
+            <h2>Post-order Traversal</h2>
+            <p>Postorder traversal visits the nodes in a left-right-root order. This means it recursively traverses the left subtree, then recursively traverses the right subtree, and finally visits the root node. Postorder traversal is often used for cleaning up resources associated with tree nodes, such as deleting them or releasing memory.
+            </p>
+            <p><i>In this traversal method, the root node is visited last, hence the name. First we traverse the left subtree, then the right subtree and finally the root node.</i></p>
+            <br><img src="image/Postorder.png" alt=""><br>
+            <p><i>We start from A, and following pre-order traversal, we first visit the left subtree B. B is also traversed post-order. The process goes on until all the nodes are visited. The output of post-order traversal of this tree will be − D → E → B → F → G → C → A</i></p>
+            <h2>Comparison of Traversal Methods</h2>
+            <table>
+                <tr>
+                    <th>Traversal Method</th>
+                    <th>Order of Nodes Visits</th>
+                    <th>Applications</th>
+                </tr>
+                <tr>
+                    <td>Inorder</td>
+                    <td>Left-Root-Right</td>
+                    <td>Traversing BSTs in sorted order</td>
+                </tr>
+                <tr>
+                    <td>Preorder</td>
+                    <td>Root-Left-Right</td>
+                    <td>Copying or creating hierarchical copies of trees</td>
+                </tr>
+                <tr>
+                    <td>Postorder</td>
+                    <td>Left-Right-Root</td>
+                    <td>Cleaning up resources associated with tree nodes</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h1 id="BT">BINARY TREE</h1>
+            <p>A binary tree is a fundamental and widely used data structure that represents data in a hierarchical manner. It consists of a root node, which is the starting point of the tree, and zero or two child nodes for each node. The binary tree data structure is characterized by its recursive nature, where each child node can also be a binary tree itself. This hierarchical organization allows for efficient data storage, retrieval, and manipulation.</p>
+            <img src="image/TreeDataStructure.png" alt="">
+            <h2>Types of Binary Tree</h2>
+            <ol>
+                <li>Full Binary Tree: A full binary tree is a binary tree in which every node has either two child nodes or no child nodes.</li>
+                <img src="image/FullBinarytree.png" alt="FullBinarytree">
+                <li>Perfect Binary Tree: A perfect binary tree is a full binary tree in which all the leaves are at the same level.</li>
+                <img src="image/PerfectBinarytree.png" alt="PerfectBinarytree">
+                <li>Complete Binary Tree: A complete binary tree is a binary tree that is filled as much as possible. In a complete binary tree, all levels except the last are completely filled, and the last level has all its nodes filled from left to right.</li>
+                <img src="image/CompleteBinarytree.png" alt="CompleteBinarytree">
+                <li>Balanced Binary Tree: A balanced binary tree is a binary tree in which the heights of the left and right subtrees of each node differ by no more than 1.</li>
+                <img src="image/BalancedBinarytree.png" alt="BalancedBinarytree">
+                <li>Degenerate or Pathological Tree: A degenerate or pathological tree is the tree having a single child either left or right.</li>
+                <img src="image/PathologicalBinarytree.png" alt="PathologicalBinarytree">
+            </ol>
+            <h2>
+                Application of Binary Trees
+            </h2>
+            <br>
+            <p><b>Binary trees are used in a wide variety of applications, including:</b></p>
+            <ul>
+                <li>File systems: Binary trees are used to organize files and directories in a hierarchical manner.</li>
+                <li>Expression trees: Binary trees are used to represent mathematical expressions for evaluation and manipulation.</li>
+                <li>Heap data structures: Binary trees are used to implement priority queues based on the heap data structure.</li>
+                <li>Decision trees: Binary trees are used to classify data based on a set of rules and conditions.</li>
+                <li>Syntax analysis: Binary trees are used to parse and understand the structure of programming languages.</li>
+            </ul>
+        </div>
+        <div>
+            <h1 id="BST">BINARY SEARCH TREE</h1>
+            <p>A binary search tree (BST) is a specialized type of binary tree that maintains a specific order among its elements. Unlike a regular binary tree, where nodes can be arranged in any order, a BST ensures that the values in the left subtree of each node are less than the value of the node itself, and the values in the right subtree are greater than the value of the node itself. This property allows for efficient searching, insertion, and deletion operations.</p>
+            <img src="image/DATA-STRUCTURE1-1.png" alt="">
+            <p><i>We observe that the root node key (27) has all less-valued keys on the left subtree and the higher valued keys on the right subtree.</i></p>
+            <h2>Key Features of Binary Search Trees</h2>
+            <ul>
+                <li>Ordered Structure: Elements are arranged in a specific order, with left subtrees containing smaller values and right subtrees containing larger values.</li>
+                <li>Efficient Search: Searching for specific elements is efficient due to the ordered structure, allowing for quick elimination of irrelevant portions of the tree.</li>
+                <li>Dynamic Data Organization: BSTs adapt to changes in data size and structure by maintaining the ordered relationship between elements.</li>
+            </ul>
+            <h2>Operations on Binary Search Tree</h2>
+            <ul>
+                <li>Insertion: Adding a new element to the BST while maintaining the ordered structure.</li>
+                <br>
+                <table class="BST">
+                    <tr>
+                        <td>
+                    <p><b>Insertion Algorithm:</b></p>
+                    <ol>
+                        <li>START</li>
+                        <li>If the tree is empty, insert the first element as the root node of the tree. The following elements are added as the leaf nodes.</li>
+                        <li>If an element is less than the root value, it is added into the left subtree as a leaf node.</li>
+                        <li>If an element is greater than the root value, it is added into the right subtree as a leaf node.</li>
+                        <li>The final leaf nodes of the tree point to NULL values as their child nodes.</li>
+                        <li>END</li>
+                    </ol>
+                </td>
+                </tr>
+                </table>
+                <br>
+                <li>Deletion: Removing an existing element from the BST without disrupting the ordered structure.</li>
+                <br>
+                <table class="BST">
+                    <tr>
+                        <td>
+                    <p><b>Deletion Algorithm:</b></p>
+                    <ol>
+                        <li>START</li>
+                        <li>Locate the node to be deleted: Search the tree for the node containing the element to be deleted. If the node is not found, the algorithm terminates with an error message.</li>
+                        <li>Case 1: Node is a leaf node:</li>
+                            <p>a. Delete the node from the tree. </p>
+                            <p>b. Update the parent pointer of the deleted node's sibling to point to NULL.</p>
+                        <li>Case 2: Node has one child:
+                            <p>a. Identify the child node (left or right).</p>
+                            <p>b. Delete the node to be removed.</p>
+                            <p>c. Connect the parent node of the deleted node directly to the child node.</p></li>
+                        <li>Case 3: Node has two child:
+                            <p>a. Locate the inorder successor of the node to be deleted. This is the smallest value  in the right subtree of the node to be deleted.</p>
+                            <p>b. Copy the value of the inorder successor to the node to be deleted.</p>
+                            <p>c. Recursively delete the inorder successor node using Case 1 or Case 2.</p></li>
+                        <li>END</li>
+                    </ol>
+                </td>
+                </tr>
+                </table>
+                <br>
+                <li>Search: Locating a specific element within the BST using search algorithms that exploit the ordered structure.</li>
+                <br>
+                <table class="BST">
+                    <tr>
+                        <td>
+                    <p><b>Search Algorithm:</b></p>
+                    <ol>
+                        <li>START</li>
+                        <li>Check whether the tree is empty or not.</li>
+                        <li>If the tree is empty, search is not possible</li>
+                        <li>Otherwise, first search the root of the tree.</li>
+                        <li>If the key does not match with the value in the root, search its subtrees.</li>
+                        <li>If the value of the key is less than the root value, search the left subtree</li>
+                        <li>If the value of the key is greater than the root value, search the right subtree.</li>
+                        <li>If the key is not found in the tree, return unsuccessful search.</li>
+                        <li>END</li>
+                    </ol>
+                </td>
+                </tr>
+                </table>
+                <br>
+                <li>Traversal: Visiting each node in the BST in a specific order, such as inorder, preorder, or postorder traversal.</li>
+                <br>
+                <table class="BST">
+                    <tr>
+                        <td>
+                            <p><b>In-Order Traversal</b></p>
+                            <p>The inorder traversal operation in a Binary Search Tree visits all its nodes in the following order:</p>
+                            <ul>
+                                <li>Firstly, we traverse the left child of the root node/current node, if any.</li>
+                                <li>Next, traverse the current node.</li>
+                                <li>Lastly, traverse the right child of the current node, if any.</li>
+                            </ul>
+                            <p><b>In-order Traversal Algorithm:</b></p>
+                    
+                            <ol>
+                                <li>START</li>
+                                <li>Traverse the left subtree, recursively</li>
+                                <li>Then, traverse the root node</li>
+                                <li>Traverse the right subtree, recursively.</li>
+                                <li>END</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><b>Pre-Order Traversal</b></p>
+                            <p>The preorder traversal operation in a Binary Search Tree visits all its nodes. However, the root node in it is first printed, followed by its left subtree and then its right subtree.</p>
+                            <p><b>Pre-order Traversal Algorithm:</b></p>
+                            <ol>
+                                <li>START</li>
+                                <li>Traverse the root node first.</li>
+                                <li>Then traverse the left subtree, recursively</li>
+                                <li>Later, traverse the right subtree, recursively.</li>
+                                <li>END</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><b>Post-Order Traversal</b></p>
+                            <p>Like the other traversals, postorder traversal also visits all the nodes in a Binary Search Tree and displays them. However, the left subtree is printed first, followed by the right subtree and lastly, the root node.</p>
+                            <p><b>Post-order Traversal Algorithm:</b></p>
+                            <ol>
+                                <li>START</li>
+                                <li>Traverse the left subtree, recursively.</li>
+                                <li>Traverse the right subtree, recursively.</li>
+                                <li>Then, traverse the root node.</li>
+                                <li>END</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </ul>
+            <h2>
+                Applications of Binary Search Trees
+            </h2>
+            <ul>
+                <li>Data Retrieval: Efficiently searching and retrieving data from sorted datasets, such as word dictionaries or phonebooks.</li>
+                <li>Data Sorting: Implementing sorting algorithms that utilize the BST's inherent ordering property.</li>
+                <li>Symbol Tables: Maintaining symbol tables in compilers and other programming language tools.</li>
+                <li>Priority Queues: Implementing priority queues using specialized variations of BSTs, such as heaps.</li>
+            </ul>
+        </div>
+        <div>
+            <h1 id="AVL">AVL TREE</h1>
+            <h2>AVL Tree: A Self-Balancing Binary Search Tree</h2>
+            <p>An AVL tree, also known as an Adelson-Velsky and Landis tree, is a specialized type of binary search tree (BST) that maintains a specific order among its elements while also ensuring that the tree remains balanced. This balance ensures that the tree's height remains close to logarithmic, resulting in efficient search, insertion, and deletion operations.</p>
+            <h2>Key Features of AVL Trees</h2>
+            <ul>
+                <li>Self-Balancing Property: Automatically maintains a balanced structure, limiting the tree's height to logarithmic.</li>
+                <li>Efficient Search and Operations: Provides efficient search, insertion, and deletion operations due to the balanced structure.</li>
+                <li>Dynamic Data Organization: Adapts to changes in data size and structure by maintaining balance and order.</li>
+            </ul>
+            <h2>Operations on AVL Trees</h2>
+            <ul>
+                <li>Insertion: Adding a new element to the AVL tree while maintaining the ordered structure and ensuring balance.</li>
+                <br>
+            <table>
+                <tr>
+                    <td>
+                        <p><b>Insertion Algorithm:</b></p>
+                        <ol>
+                            <li>Create a node</li>
+                            <li>Check if the tree is empty</li>
+                            <li>If the tree is empty, the new node created will become the root node of the AVL Tree.</li>
+                            <li>If the tree is not empty, we perform the Binary Search Tree insertion operation and check the balancing factor of the node in the tree.</li>
+                            <li>Suppose the balancing factor exceeds ±1, we apply suitable rotations on the said node and resume the insertion from Step 4.</li>
+                        </ol>
+                        <br>
+                        <p><b>Insertion Example</b></p>
+                        <p>Let us understand the insertion operation by constructing an example AVL tree with 1 to 7 integers.</p>
+                        <p>Starting with the first element 1, we create a node and measure the balance, i.e., 0.
+                        </p>
+
+                        <br>
+                        <img src="image/8.png" alt="">
+                        <br>
+
+                        <p>Since both the binary search property and the balance factor are satisfied, we insert another element into the tree.</p>
+
+                        <br>
+                        <img src="image/9.png" alt="">
+
+                        <p>The balance factor for the two nodes are calculated and is found to be -1 (Height of left subtree is 0 and height of the right subtree is 1). Since it does not exceed 1, we add another element to the tree.</p>
+
+                        <img src="image/10.png" alt="">
+
+                        <p>The tree is rearranged as:</p>
+
+                        <img src="image/11.png" alt="">                      
+
+                        <p>Similarly, the next elements are inserted and rearranged using these rotations. After rearrangement, we achieve the tree as:</p>
+
+                        <img src="image/12.png" alt="">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <li>Deletion: Removing an existing element from the AVL tree without disrupting the ordered structure and maintaining balance.</li>
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        <p><b>Deletion in the AVL Trees take place in three different scenarios:</b></p>
+                            <ul>
+                                <li>Scenario 1 (Deletion of a leaf node) − If the node to be deleted is a leaf node, then it is deleted without any replacement as it does not disturb the binary search tree property. However, the balance factor may get disturbed, so rotations are applied to restore it.</li>
+                                <li>Scenario 2 (Deletion of a node with one child) − If the node to be deleted has one child, replace the value in that node with the value in its child node. Then delete the child node. If the balance factor is disturbed, rotations are applied.</li>
+                                <li>Scenario 3 (Deletion of a node with two child nodes) − If the node to be deleted has two child nodes, find the inorder successor of that node and replace its value with the inorder successor value. Then try to delete the inorder successor node. If the balance factor exceeds 1 after deletion, apply balance algorithms.</li>
+                            </ul><br>
+                            <p><b>Deletion Example</b></p>
+                            <p>Using the same tree given above, let us perform deletion in three scenarios.</p><br>
+                            <ul>
+                                <li>Deleting element 7 from the tree:</li>
+                                <img src="image/14.png" alt="">
+                                <p>Since the element 7 is a leaf, we normally remove the element without disturbing any other node in the tree</p><br>
+                                <li>Deleting element 6 from the output tree achieved:</li>
+
+                                <img src="image/15.png" alt="">
+
+                                <p>However, element 6 is not a leaf node and has one child node attached to it. In this case, we replace node 6 with its child node: node 5.</p>
+
+                                <img src="image/16.png" alt="">
+
+                                <p>The balance of the tree becomes 1, and since it does not exceed 1 the tree is left as it is. If we delete element 5 further, we would have to apply the left rotations; either LL or LR since the imbalance occurs at both 1-2-4 and 3-2-4.</p>
+
+                                <img src="image/17.png" alt="">
+
+                                <p>The balance factor is disturbed after deleting the element 5, therefore we apply LL rotation (we can also apply the LR rotation here).</p>
+
+                                <img src="image/18.png" alt="">
+
+                                <p>Once the LL rotation is applied on path 1-2-4, the node 3 remains as it was supposed to be the right child of node 2 (which is now occupied by node 4). Hence, the node is added to the right subtree of the node 2 and as the left child of the node 4.</p><br>
+                                <li>Deleting element 2 from the remaining tree :</li>
+
+                                <img src="image/19.png" alt="">
+
+                                <p>As mentioned in scenario 3, this node has two children. Therefore, we find its inorder successor that is a leaf node (say, 3) and replace its value with the inorder successor.</p>
+                                <img src="image/20.png" alt="">
+
+                                <p>The balance of the tree still remains 1, therefore we leave the tree as it is without performing any rotations.</p>
+                            </ul>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <li>Search: Locating a specific element within the AVL tree using search algorithms that exploit the ordered structure and balanced height.</li>
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        <p><b>Search Algorithm:</b></p>
+                        <ol>
+                            <li>Start at the root node of the AVL tree.</li>
+                            <li>Compare the target element to the value of the current node:</li>
+                            <p>a. If the target element is equal to the value of the current node, the element has been found. Return the current node.</p>
+                            <p>b. If the target element is less than the value of the current node, move to the left subtree.</p>
+                            <p>c. If the target element is greater than the value of the current node, move to the right subtree.</p>
+                            <li>Repeat step 2 until the target element is found or the search reaches a leaf node.</li>
+                            <li>If the search reaches a leaf node, the target element is not present in the AVL tree. Return NULL.</li>
+                        </ol>
+                        <br>
+                        <p><b>Search Example
+                        </b></p>
+                        <p>Input: AVL tree with values {1, 2, 3, 4, 5, 6, 7, 8, 9}</p>
+                        <p>Target element: 5</p>
+                        <ol>
+                            <li>Start at the root node, which has value 3.</li>
+                            <li>Compare the target element (5) to the value of the current node (3). 5 is greater than 3, so move to the right subtree.</li>
+                            <li>The right subtree's root node has value 5. The element has been found.</li>
+                            <li>Return the current node, which is the node containing the target element.</li>
+                        </ol>
+                        <br>
+                        <p>In this example, the search algorithm efficiently locates the target element using the ordered structure and balanced height of the AVL tree. The search path is relatively short, and the algorithm completes in logarithmic time complexity.</p>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <li>Rotation: Performing left or right rotations to restore balance after insertion or deletion operations.</li>
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        <p>In AVL trees, the difference between the heights of left and right subtrees, known as the Balance Factor, must be at most one. Once the difference exceeds one, the tree automatically executes the balancing algorithm until the difference becomes one again.</p><br>
+                        <p>BALANCE FACTOR = HEIGHT(LEFT SUBTREE) – HEIGHT(RIGHT SUBTREE)</p><br>
+                        <p>There are usually four cases of rotation in the balancing algorithm of AVL trees: LL, RR, LR, RL.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>LL Rotations</b></p>
+                        <p>LL rotation is performed when the node is inserted into the right subtree leading to an unbalanced tree. This is a single left rotation to make the tree balanced again:</p>
+                        <img src="image/1.png" alt="">
+                        <p>The node where the unbalance occurs becomes the left child and the newly added node becomes the right child with the middle node as the parent node.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>RR Rotations</b></p>
+                        <p>RR rotation is performed when the node is inserted into the left subtree leading to an unbalanced tree. This is a single right rotation to make the tree balanced again:</p>
+                        <img src="image/2.png" alt="">
+                        <p>The node where the unbalance occurs becomes the right child and the newly added node becomes the left child with the middle node as the parent node.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>LR Rotations</b></p>
+                        <p>LR rotation is the extended version of the previous single rotations, also called a double rotation. It is performed when a node is inserted into the right subtree of the left subtree. The LR rotation is a combination of the left rotation followed by the right rotation. There are multiple steps to be followed to carry this out.</p>
+                        <ul>
+                            <li>Consider an example with “A” as the root node, “B” as the left child of “A” and “C” as the right child of “B”</li>
+                            <li>Since the unbalance occurs at A, a left rotation is applied on the child nodes of A, i.e. B and C.</li>
+                            <li>After the rotation, the C node becomes the left child of A and B becomes the left child of C.</li>
+                            <li>The unbalance still persists, therefore a right rotation is applied at the root node A and the left child C.</li>
+                            <li>After the final right rotation, C becomes the root node, A becomes the right child and B is the left child.</li>
+                        </ul>
+                        <img src="image/3.png" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>RL Rotations</b></p>
+                        <p>RL rotation is also the extended version of the previous single rotations, hence it is called a double rotation and it is performed if a node is inserted into the left subtree of the right subtree. The RL rotation is a combination of the right rotation followed by the left rotation. There are multiple steps to be followed to carry this out.</p>
+                        <ul>
+                            <li>Consider an example with “A” as the root node, “B” as the right child of “A” and “C” as the left child of “B”.</li>
+                            <li>Since the unbalance occurs at A, a right rotation is applied on the child nodes of A, i.e. B and C.</li>
+                            <li>After the rotation, the C node becomes the right child of A and B becomes the right child of C.</li>
+                            <li>The unbalance still persists, therefore a left rotation is applied at the root node A and the right child C.</li>
+                            <li>After the final left rotation, C becomes the root node, A becomes the left child and B is the right child.</li>
+                        </ul>
+                        <img src="image/AVl.png" alt="">
+                    </td>
+                </tr>
+            </table>
+            <br>
+        </ul>
+        <h2>Applications of AVL Trees</h2>
+        <ul>
+            <li>Data Management: Efficiently managing large datasets that require frequent search, insertion, and deletion operations.</li>
+            <li>Real-Time Systems: Handling real-time data processing and retrieval in applications where timeliness is crucial.</li>
+            <li>Database Indexing: Implementing efficient indexing mechanisms for databases, enabling quick data retrieval.</li>
+            <li>Symbol Tables: Maintaining symbol tables in compilers and other programming language tools with improved performance.</li>
+        </ul>
+        </div>
+    </div>
+    <a class="top" href="#"><img src="image/arrow-up.png"></a>
+</section>
+</body>
+</html>
